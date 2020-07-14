@@ -72,3 +72,15 @@ Route::get('admin/dashboard', function(){
 Route::get('admin/login', function(){
     return "Admin Login Page";
 })->name('admin-login')->middleware('auth.admin');
+
+
+// For student controller
+Route::get('student', 'StudentController@index');
+Route::post('student/create', 'StudentController@insert')->name('student-create');
+Route::get('student/class/{id}', 'StudentController@getClassWithStudent');
+
+
+// For class controller
+Route::get('student/class', 'StudentClassController@index');
+Route::post('student/class/create', 'StudentClassController@insert')->name('class-create');
+Route::get('student/{id}', 'StudentClassController@getStudentWithClass');
