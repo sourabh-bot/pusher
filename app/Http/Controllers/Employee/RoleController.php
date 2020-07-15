@@ -21,6 +21,6 @@ class RoleController extends Controller
     }
 
     public function show($id){
-        return Role::find($id)->users;
+        // return Role::find($id)->users;
     }
 }
