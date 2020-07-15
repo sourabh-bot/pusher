@@ -104,3 +104,11 @@ Route::get('car/owner/{id}', 'Car\MechanicController@getCarOwner');
 // For Car Controller
 Route::get('car', 'Car\CarController@index');
 Route::post('car/mechanic', 'Car\CarController@add' )->name('add-car');
+
+Route::get('relation/user', 'Relation\MyUserController@index');
+Route::get('relation/post', 'Relation\PostController@index');
+Route::post('relation/user/create', 'Relation\MyUserController@create')->name('user-create');
+Route::post('relation/post/create', 'Relation\PostController@create')->name('post-create');
+Route::get('relation/user/image/{id}', 'Relation\MyUserController@getImg');
+Route::get('relation/post/image/{id}', 'Relation\PostController@getImg');
+Route::get('relation/image/{id}', 'Relation\ImageController@index');
