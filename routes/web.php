@@ -84,3 +84,14 @@ Route::get('student/class/{id}', 'StudentController@getClassWithStudent');
 Route::get('student/class', 'StudentClassController@index');
 Route::post('student/class/create', 'StudentClassController@insert')->name('class-create');
 Route::get('student/{id}', 'StudentClassController@getStudentWithClass');
+
+
+// For Employee controller
+Route::get('employee', 'Employee\EmployeeController@index');
+Route::post('employee/add', 'Employee\EmployeeController@add')->name('add');
+Route::get('employee/{id}', 'Employee\EmployeeController@show')->name('show');
+
+// For Role controller
+Route::get('employee-role', 'Employee\RoleController@index');
+Route::post('employee-role/add', 'Employee\RoleController@add')->name('role-add');
+Route::get('employee-role/{id}', 'Employee\RoleController@show');
