@@ -95,3 +95,12 @@ Route::get('employee/{id}', 'Employee\EmployeeController@show')->name('show');
 Route::get('employee-role', 'Employee\RoleController@index');
 Route::post('employee-role/add', 'Employee\RoleController@add')->name('role-add');
 Route::get('employee-role/{id}', 'Employee\RoleController@show');
+
+// For Mechanic controller
+Route::get('car/mechanic', 'Car\MechanicController@index');
+Route::post('car/mechanic', 'Car\MechanicController@add' )->name('add');
+Route::get('car/owner/{id}', 'Car\MechanicController@getCarOwner');
+
+// For Car Controller
+Route::get('car', 'Car\CarController@index');
+Route::post('car/mechanic', 'Car\CarController@add' )->name('add-car');
